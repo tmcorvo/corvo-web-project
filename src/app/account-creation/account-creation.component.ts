@@ -26,10 +26,10 @@ export class AccountCreationComponent {
     } else{
       this.psswdsMatch = false;
     }
-    console.log(this.psswdsMatch);
+    console.log('Passwords match is ' + this.psswdsMatch);
   }
 
   onSubmit(): void{
-    console.log("Form Submitted");
+      console.log("Form Submitted");
   }
 }

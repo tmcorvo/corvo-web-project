@@ -1,6 +1,6 @@
 <div class="form-container">
     <form (ngSubmit)="onSubmit()">
-        <h1>Welcome!</h1>
+        <h1>Let's get started...</h1>
         <mat-form-field class="form-group">
             <mat-label>Username</mat-label>
             <input matInput type="text" [formControl]="uname"
@@ -54,6 +54,8 @@
                 Please enter a valid e-mail address
               </mat-error>
         </mat-form-field>
+
+        
 
         <div class="btn-container">
             <button mat-raised-button color="warn" type="reset">Clear Form</button>
