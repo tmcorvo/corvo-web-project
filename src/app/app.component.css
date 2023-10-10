@@ -1,6 +1,7 @@
 .banner-title {
     display: inline-block;
     cursor: pointer;
+    user-select: none;
 }
 
 .nav-menu {

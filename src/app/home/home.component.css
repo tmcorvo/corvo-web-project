@@ -1,0 +1,19 @@
+.container {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-card {
+    margin: 2%;
+    padding: 2%;
+    max-width: 90%;
+}
+
+.title {
+    margin: 2%;
+}
+
+button {
+    margin: 2%;
+}
