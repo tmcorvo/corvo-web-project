@@ -1,0 +1,9 @@
+.banner-title {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
