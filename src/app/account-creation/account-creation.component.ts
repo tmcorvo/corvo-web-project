@@ -16,7 +16,7 @@ export class AccountCreationComponent {
   hidepsswd = true;
   hidecfrmpsswd = true;
 
-  psswdsMatch = true;
+  psswdsMatch = false;
 
   matcher = new InputErrorStateMatcherModule();
 
@@ -30,6 +30,8 @@ export class AccountCreationComponent {
   }
 
   onSubmit(): void{
+    if(this.psswdsMatch){
       console.log("Form Submitted");
+    } 
   }
 }

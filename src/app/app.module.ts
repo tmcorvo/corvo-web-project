@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
  declarations: [
@@ -46,6 +47,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatTabsModule,
  ],
  providers: [],
  bootstrap: [AppComponent]

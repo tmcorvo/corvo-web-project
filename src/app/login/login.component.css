@@ -1,17 +1,4 @@
-.form-container {
-    padding: 10%;
-    height: 100%;
-}
-
-.form-group {
+.mat-form-element {
     display: block;
-}
-
-.btn-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-button {
-    margin: 2%;
+    margin-top: 2%;
 }

@@ -1,18 +1,8 @@
-.form-container {
-    padding: 10%;
-    height: 100%;
-}
-
-.form-group {
+.mat-form-element {
     display: block;
     margin-top: 2%;
 }
 
-.btn-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-button {
-    margin: 2%;
+mat-tab-group {
+    display: block;
 }

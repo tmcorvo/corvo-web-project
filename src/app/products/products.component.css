@@ -1,11 +1,4 @@
-.container {
-    margin: 16px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-   }
-   
+  
    mat-grid-list {
     width: 100%;
    }

@@ -1,65 +1,69 @@
-<div class="form-container">
-    <form (ngSubmit)="onSubmit()">
-        <h1>Let's get started...</h1>
-        <mat-form-field class="form-group">
-            <mat-label>Username</mat-label>
-            <input matInput type="text" [formControl]="uname"
-            [errorStateMatcher]="matcher">
-            <mat-error *ngIf="uname.hasError('required')">
-                Username is <strong>required</strong>
-            </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="form-group">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" (change)="onChange($event)" [type]="hidepsswd ? 'password' : 'text'" [formControl]="psswd"
-            [errorStateMatcher]="matcher">
-            <button mat-icon-button matSuffix tabindex="-1" (click)="hidepsswd = !hidepsswd" [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hidepsswd" type="button">
-        <mat-icon>{{hidepsswd ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-            <mat-error *ngIf="psswd.hasError('required')">
-                Password is <strong>required</strong>
-            </mat-error>
-            <mat-error *ngIf="psswd.hasError('minLenght') && !psswd.hasError('required')">
-                Password needs to be at least <strong>6 characters</strong> long
-            </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="form-group">
-            <mat-label>Confirm Password</mat-label>
-            <input matInput type="password" (change)="onChange($event)" [type]="hidecfrmpsswd ? 'password' : 'text'" [formControl]="cfrmpsswd"
-            [errorStateMatcher]="matcher">
-            <button mat-icon-button matSuffix tabindex="-1" (click)="hidecfrmpsswd = !hidecfrmpsswd" [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hidecfrmpsswd" type="button">
-        <mat-icon>{{hidecfrmpsswd ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-            <mat-error *ngIf="cfrmpsswd.hasError('required')">
-                Confirm password is <strong>required</strong>
-            </mat-error>
-            <mat-error *ngIf="!psswdsMatch && !email.hasError('required')">
-                Passwrods don't match
-              </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="form-group">
-            <mat-label>E-mail</mat-label>
-            <input matInput type="text" [formControl]="email"
-            [errorStateMatcher]="matcher"
-            placeholder="johndoe@gmail.com">
-            <mat-error *ngIf="cfrmpsswd.hasError('required')">
-                E-mail is <strong>required</strong>
-            </mat-error>
-            <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
-                Please enter a valid e-mail address
-              </mat-error>
-        </mat-form-field>
-
+<div class="container">
+    <div class="content">
+        <mat-tab-group>
+            <mat-tab label="Account">
+                <form (ngSubmit)="onSubmit()">
+                <mat-form-field class="mat-form-element">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" [formControl]="uname"
+                    [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="uname.hasError('required')">
+                        Username is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="mat-form-element">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" (change)="onChange($event)" [type]="hidepsswd ? 'password' : 'text'" [formControl]="psswd"
+                    [errorStateMatcher]="matcher">
+                    <button mat-icon-button matSuffix tabindex="-1" (click)="hidepsswd = !hidepsswd" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hidepsswd" type="button">
+                <mat-icon>{{hidepsswd ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+                    <mat-error *ngIf="psswd.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="psswd.hasError('minLenght') && !psswd.hasError('required')">
+                        Password needs to be at least <strong>6 characters</strong> long
+                    </mat-error>
+                </mat-form-field>
         
-
-        <div class="btn-container">
-            <button mat-raised-button color="warn" type="reset">Clear Form</button>
-            <button mat-raised-button color="primary" type="submit">Continue</button>
-          </div>
-    </form>
+                <mat-form-field class="mat-form-element">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password" (change)="onChange($event)" [type]="hidecfrmpsswd ? 'password' : 'text'" [formControl]="cfrmpsswd"
+                    [errorStateMatcher]="matcher">
+                    <button mat-icon-button matSuffix tabindex="-1" (click)="hidecfrmpsswd = !hidecfrmpsswd" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hidecfrmpsswd" type="button">
+                <mat-icon>{{hidecfrmpsswd ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+                    <mat-error *ngIf="cfrmpsswd.hasError('required')">
+                        Confirm password is <strong>required</strong>
+                    </mat-error>
+                    <!-- <mat-error *ngIf="psswdsMatch == false && !cfrmpsswd.hasError('required')">
+                        Passwrods don't match
+                      </mat-error> -->
+                </mat-form-field>
+        
+                <mat-form-field class="mat-form-element">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput type="text" [formControl]="email"
+                    [errorStateMatcher]="matcher"
+                    placeholder="johndoe@gmail.com">
+                    <mat-error *ngIf="cfrmpsswd.hasError('required')">
+                        E-mail is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                        Please enter a valid e-mail address
+                      </mat-error>
+                </mat-form-field>
+        
+                <div class="btn-container">
+                    <button mat-raised-button color="warn" type="reset">Clear Form</button>
+                    <button mat-raised-button color="primary" type="submit">Continue</button>
+                </div>
+            </form>
+        </mat-tab>
+        <mat-tab label="Payment"> Content 2 </mat-tab>
+        <mat-tab label="Shipping"> Content 3 </mat-tab>
+    </mat-tab-group>
+    </div>
 </div>
